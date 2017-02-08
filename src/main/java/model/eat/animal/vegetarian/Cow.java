@@ -7,7 +7,8 @@ import model.eat.Eatable;
  */
 public class Cow extends Vegetarian {
     @Override
-    public boolean eat(Eatable eatable) {
-        return isItEatVegetarian(eatable);
+    public void eat(Eatable eatable) {
+        isItEatVegetarian(eatable);
+        System.out.println("Cow eat " + eatable.getClass().getSimpleName());
     }
 }

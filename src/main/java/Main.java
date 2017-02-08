@@ -15,14 +15,13 @@ public class Main {
         Animal leo = new Lion();
 
         Plant plant = new Grass();
+        cow.eat(lion);
+        cow.eat(cow);
+        cow.eat(plant);
 
-        print(cow, lion, cow.eat(lion));
-        print(cow, cow, cow.eat(cow));
-        print(cow, plant, cow.eat(plant));
-
-        print(lion, cow, lion.eat(cow));
-        print(lion, cow, lion.eat(lion));
-        print(lion, cow, lion.eat(plant));
+        lion.eat(cow);
+        lion.eat(lion);
+        lion.eat(plant);
     }
 
     private static void print(Eatable eater, Eatable eat, boolean answer) {
